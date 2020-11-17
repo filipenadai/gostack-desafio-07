@@ -1,4 +1,8 @@
-const formatValue = (value: number): string =>
-  Intl.NumberFormat().format(value); // TODO
+const formatValue = (number: number): string => {
+  return Intl.NumberFormat('pt-br', {
+    style: 'currency',
+    currency: 'BRL',
+  }).format(number);
+};
 
 export default formatValue;
